@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/master.css">
+
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default">
+<form role="search" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Search" class="form-control" style="margin-top: 10px;margin-right: -4px; ">
+					 <input type="button" class="btn btn-info" value="Info" style="margin-top: 10px;margin-right:126px; ">
+                </div>
+            </form>
+</nav>
+<div class="container">
+
+<!--<div class="tele_nav">
+	<ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Contacts</a></li>
+        <li><a href="#">Grouping</a></li>
+        <li><a href="#">Groups</a></li>
+		<li><a href="#">Mapping</a></li>
+		<li><a href="#">Broadcast</a></li>
+		<li><a href="#">Logout</a></li>
+		
+	</ul>
+	</div>-->
+	<div class="container-fluid box">
+  
+   <div class="col-md-3"><div class="tele_nav">
+	<ul class="nav nav-pills nav-stacked">
+        <li><a href="#m1" class="cont_border"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Contacts</a></li>
+		<li><a href="#" class="cont_border"><span class="glyphicon glyphicon-link"></span>&nbsp;&nbsp;Mapping</a></li>
+        <li><a href="#" class="cont_border"><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Grouping</a></li>
+        <li><a href="#" class="cont_border"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Groups</a></li>
+		<li><a href="#" class="cont_border"><span class="glyphicon glyphicon-tent"></span>&nbsp;&nbsp;Broadcast</a></li>
+		<li><a href="#" class="cont_border"><span class="glyphicon glyphicon-tasks"></span>&nbsp;&nbsp;Setting</a></li>
+		<li><a href="#" class="cont_border"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Logout</a></li>
+		
+	</ul>
+	</div></div>
+            <div class="col-md-9 target">
+			<div class="contacts_tab" id="m1">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#sectionA">All Users</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Care Providers</a></li>
+		 <li><a data-toggle="tab" href="#sectionB">Patients</a></li>
+		  <li><a data-toggle="tab" href="#import">Import</a></li>
+	</ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+            <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Redemtion Code</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+			<tr>
+                <td>Adam Slate</td>
+                <td>+14 123-345-1234</td>
+                <td>X01AP55BB</td>
+                <td>Activated</td>
+            </tr>
+            
+        </tbody>
+    </table>
+	
+        </div>
+        <div id="import" class="tab-pane fade">
+            <h3>Section B</h3>
+            <button>hello</button>
+        </div>
+        
+        
+    </div>
+</div>
+			</div>
+            <div>
+    <ul class="pagination">
+        
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+		<li><a href="#">5</a></li>
+        <li><a href="#">next</a></li>
+    </ul>
+</div>
+ 
+</div>
+</div>
+</body>
+</html>                                		

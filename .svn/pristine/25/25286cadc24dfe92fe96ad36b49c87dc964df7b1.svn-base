@@ -1,0 +1,31 @@
+go2ahcApp.controller('userListController', ['$scope', '$location', function($scope, $location) {
+
+    var userListProxy = new userList();
+
+
+
+    // $scope.pageChanged = function() {
+    //     $log.log('Page changed to: ' + $scope.currentPage);
+    // };
+
+    $scope.maxSize = 5;
+    $scope.bigTotalItems = 175;
+    $scope.bigCurrentPage = 1;
+
+    $scope.userListFetched = function(result) {
+        //console.log("login result = " + JSON.stringify(result));  
+        $scope.userList = result;
+
+        $scope.totalItems = result.length;
+        $scope.currentPage = 1;
+
+        $scope.setPage = function(pageNo) {
+            $scope.currentPage = pageNo;
+        };
+    };
+
+    $scope.init = function() {
+        userListProxy.getUsersList(null, $scope.userListFetched, $scope.userListFailed);
+    };
+    $scope.init();
+}]);

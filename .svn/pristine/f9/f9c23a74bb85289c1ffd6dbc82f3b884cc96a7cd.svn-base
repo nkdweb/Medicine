@@ -1,0 +1,85 @@
+<div class="contact_wrapper mar-top-30">
+    <div class="row">
+        <ul class="nav nav-tabs main_header_link">
+            <li class="active heading_inside"><a showtab="" href="#allUser" class="header_link">All Users</a></li>
+            <li class="heading_inside"><a showtab="" href="#careProvider" class="header_link">Care Providers</a></li>
+            <li class="heading_inside"><a showtab="" href="#patients" class="header_link">Patients</a></li>
+            <li class="heading_inside"><a showtab="" href="#import" class="header_link">Import</a></li>
+        </ul>
+        <div class="calendarNav tab-pane fade in active" id="allUser">
+            <div ng-controller="userListController">
+                <div class="contact_wrapper mar-top-30">
+                    <div class="row user_list_header">
+                        <div class="col-sm-6 col-md-6 col-lg-6 list_name" ng-click="sortByName()">Name</div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">Mobile</div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">Redemption Code</div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">Status
+                            <!-- <div id="user_filter" data-toggle="popover" data-placement="bottom"></div>
+                            <div id="user_filter_content">
+                                <span>User Type</span>
+                                <input type="checkbox">&nbsp; Care Provider
+                                <input type="checkbox">&nbsp; Patients
+                                <span>Status</span>
+                                <input type="checkbox">&nbsp; Activated
+                                <input type="checkbox">&nbsp; Not Activated
+                                <a href="#">Clear All</a>
+                                <button name="REFINE" class="btn bth-blue">REFINE</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div ng-repeat="item in userListData | startFrom: (currentPage-1)*itemsPerPage | limitTo: itemsPerPage">
+                        <div class="row user_lists">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="user_img"></div>
+                                <div class="user_name">{{item.name}}</div>
+                                <div class="user_type {{item.userType}}">{{item.userType}}</div>
+                                <div class="user_groups">{{item.groupCount}} groups</div>
+                                <div class="user_mapping">{{item.mapCount}} Mapping</div>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <div class="user_mobile">{{item.mobileNo}}</div>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <div class="user_redem_code">{{item.redemptionCode}}</div>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <div class="user_status">{{item.status}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_list_pagination">
+                    <!-- <pagination total-items="userListLength" num-pages="numPerPage" current-page="currentPage" ng-model="currentPage" items-per-page="numPerPage"></pagination> -->
+                    <pagination on-select-page="pageChanged(page)" total-items="totalItems" items-per-page="itemsPerPage" page="currentPage" max-size="maxSize" ng-model="currentPage"></pagination>
+                </div>
+            </div>
+        </div>
+        <div id="careProvider" class="tab-pane fade">
+            Care Providers page...........
+        </div>
+        <div id="patients" class="tab-pane fade">
+            Patients Page.............
+        </div>
+        <div id="import" class="tab-pane fade contact_import_details">
+            <div class="import_contact_div">
+                <label class="import_page_lbl">Import Contacts(.xls / .xlsx / .csv)</label>
+                </br>
+                <div class="choose_file">
+                    <span>Browse..</span>
+                    <input name="Select File" type="file" class="import_upload_div" />
+                </div>
+                <button class="btn upload_btn" ng-click="uploadXLS()">Upload</button>
+                </br>
+            </div>
+            <div class="import_redemption_code_div">
+                <label class="import_page_lbl">Import Redemtion Code(.xls / .xlsx / .csv)</label>
+                </br>
+                <div class="choose_file">
+                    <span>Browse..</span>
+                    <input name="Select File" type="file" class="import_upload_div" />
+                </div>
+                <button class="btn upload_btn" ng-click="uploadXLS()">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>

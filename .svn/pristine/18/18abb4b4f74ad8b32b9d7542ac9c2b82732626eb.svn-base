@@ -1,0 +1,75 @@
+.dashboard {
+    .app_menu {
+        background: #4A5864;
+        min-height: 650px;
+        padding: 0px;
+    }
+    .sidemenu {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        li {
+            list-style-type: none;
+            padding: 20px;
+            border-bottom: solid 1px #5C6974;
+            text-indent: 35px;
+            font-family: verdana;
+            font-size: 15px;
+            cursor: pointer;
+            color: #ffffff;
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+        li.contacts {
+            background: url("../images/menu_icons.png") no-repeat -18px -334px;
+        }
+        li.contacts:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -334px;
+        }
+        li.mapping {
+            background: url("../images/menu_icons.png") no-repeat -18px -646px;
+        }
+        li.mapping:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -646px;
+        }
+        li.grouping {
+            background: url("../images/menu_icons.png") no-repeat -18px -437px;
+        }
+        li.grouping:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -437px;
+        }
+        li.group {
+            background: url("../images/menu_icons.png") no-repeat -18px -544px;
+        }
+        li.group:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -544px;
+        }
+        li.broadcast {
+            background: url("../images/menu_icons.png") no-repeat -18px -232px;
+        }
+        li.broadcast:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -232px;
+        }
+        li.settings {
+            background: url("../images/menu_icons.png") no-repeat -18px -123px;
+        }
+        li.settings:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -123px;
+        }
+        li.logout {
+            background: url("../images/menu_icons.png") no-repeat -18px -22px;
+        }
+        li.logout:hover {
+            background: #37414A url("../images/menu_icons.png") no-repeat -18px -22px;
+        }
+    }
+    .main_container {
+        background: #E9EDF5;
+        min-height: 650px;
+    }
+    #dynamic-view {
+        width: 100%;
+    }
+}

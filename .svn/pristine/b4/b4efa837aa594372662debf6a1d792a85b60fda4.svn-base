@@ -1,0 +1,56 @@
+<div ng-controller="userListController">
+    <div class="contact_wrapper mar-top-30">
+        <div class="row user_list_header">
+            <div class="col-sm-6 col-md-6 col-lg-6 list_name">Name</div>
+            <div class="col-sm-2 col-md-2 col-lg-2">Mobile</div>
+            <div class="col-sm-2 col-md-2 col-lg-2">Redemption Code</div>
+            <div class="col-sm-2 col-md-2 col-lg-2">Status</div>
+        </div>
+        <div ng-repeat="item in userList.getAllUsersResponseDetails">
+            <div class="row user_lists">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="user_img"></div>
+                    <div class="user_name">{{item.name}}</div>
+                    <div class="user_type {{item.userType}}">{{item.userType}}</div>
+                    <div class="user_groups">{{item.groupCount}} groups</div>
+                    <div class="user_mapping">{{item.mapCount}} Mapping</div>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="user_mobile">{{item.mobileNo}}</div>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="user_redem_code">{{item.redemptionCode}}</div>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="user_status">{{item.status}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="user_list_pagination">
+        <pagination total-items="totalItems" ng-model="currentPage" items-per-page="" ng-change="pageChanged()"></pagination>
+    </div>    
+
+    <!-- 
+        <nav>
+            <ul class="pagination pagination-lg">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div> -->
+</div>

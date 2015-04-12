@@ -1,0 +1,51 @@
+go2ahcApp.controller('loginController', ['$scope', '$location','$rootScope', function($scope, $location,$rootScope) {
+	var authenticationProxy = new Authentication();
+     $rootScope.Appln = {
+        hideHeader : true
+    };
+    
+    // Initializing the variables
+    $scope.Login = {
+        userName: "",
+        password: "",
+        rememberMe: false
+    };
+
+    $scope.loginSubmit = function(event, bool) {
+        var loginUsername = $scope.Login.username;
+        var loginPassword = $scope.Login.password;
+        var loginServObj = $scope.Login;
+        delete loginServObj.rememberMe;
+        authenticationProxy.login(JSON.stringify(loginServObj), $scope.loginSuccess, $scope.loginFailure);
+    };
+
+    /**
+     * Purpose : To redirect the user to dashboard/profile completion page after login successfull
+     * Scope   : This method will execute on successfull login service
+     */
+    $scope.loginSuccess = function(result) {
+        //console.log("login result = " + JSON.stringify(result));      
+    	var loggedInUserFirstName=result['userName'];
+		//var loggedInUserLastName=result['lastName'];
+
+		var Names = {
+		    firstName  : loggedInUserFirstName,
+            authentication: true
+	    };
+
+	    globalfn.mergeSourceInToTarget(localStorage, Names);
+        //sessionService.authSuccess(result);
+        $location.path('/mapping');
+
+    };
+
+    /**
+     * Purpose : To display error message in login form
+     * Scope   : This method will execute on login success failure
+     */
+    $scope.loginFailure = function(result) {
+    	$scope.loginError = "Username or password doesn't exist!";
+    };
+
+
+}]);

@@ -1,0 +1,65 @@
+.contact_wrapper {
+    background: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+    border: solid #D3D7DA 1px;
+    min-height: 510px;
+    width: 100%;
+    .user_list_header {
+        height: 44px;
+        padding-top: 10px;
+        color: #8F969C;
+    }
+    .user_lists {
+        color: #4A5864;
+        .user_img {
+            height: 40px;
+            width: 40px;
+            background: #E2E2E2;
+            border-radius: 50%;
+            float: left;
+        }
+        .user_name {
+            float: left;
+            padding: 10px;
+        }
+        .user_type_cp {
+            background: none repeat scroll 0 0 #e1ffc1;
+            border-radius: 8px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #89BF4F;
+        }
+        .user_groups {
+            background: #FAF6BC;
+            border-radius: 8px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #89BF4F;
+        }
+        .user_mapping {
+            background: #EBEBEB;
+            border-radius: 8px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #B7B7B7;
+        }
+        .user_mobile {
+        	margin: 10px 6px 0px;
+        }
+        .user_redem_code {
+        	margin: 10px 6px 0px;
+        }
+        .user_status {
+        	margin: 10px 6px 0px;
+        }
+    }
+}

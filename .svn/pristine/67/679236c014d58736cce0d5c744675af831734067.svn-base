@@ -1,0 +1,26 @@
+<div class="contact_wrapper mar-top-30">
+    <div class="row user_list_header">
+        <div class="col-sm-6 col-md-6 col-lg-6">Name</div>
+        <div class="col-sm-2 col-md-2 col-lg-2">Mobile</div>
+        <div class="col-sm-2 col-md-2 col-lg-2">Redemption Code</div>
+        <div class="col-sm-2 col-md-2 col-lg-2">Status</div>
+    </div>
+    <div class="row user_lists">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="user_img"></div>
+            <div class="user_name">Brain Slate</div>
+            <div class="user_type_cp">Care Provider</div>
+            <div class="user_groups">5 groups</div>
+            <div class="user_mapping">4 Mapping</div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <div class="user_mobile">+14 980-456-3456</div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+             <div class="user_redem_code">ASO123WEDR</div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+             <div class="user_status">Activated</div>
+        </div>
+    </div>
+</div>

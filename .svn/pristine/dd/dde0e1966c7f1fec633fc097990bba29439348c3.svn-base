@@ -1,0 +1,52 @@
+go2ahcApp.controller('userListController', ['$scope', '$location', function($scope, $location) {
+
+    var userListProxy = new userList();
+
+    $scope.userListFetched = function(result) {
+        console.log("login result = " + JSON.stringify(result));  
+
+        $scope.userListData = result.getAllUsersResponseDetails;
+
+        // var userListLength = result.getAllUsersResponseDetails.length;
+        // $scope.numPerPage = 8;
+        // var noOfPages = Math.ceil(userListLength / $scope.numPerPage);
+        // $scope.currentPage = 1;
+
+        // $scope.setPage = function() {
+        //     $scope.offset = ($scope.currentPage - 1) * $scope.numPerPage;
+        //     $scope.limit = $scope.numPerPage;
+        //     $scope.offset_limit =  $scope.offset + $scope.limit;
+        //     $scope.userListData = result.getAllUsersResponseDetails.slice($scope.offset, $scope.offset_limit);
+
+        //     console.log("login result = " + JSON.stringify($scope.userListData));  
+        // };
+
+        // $scope.$watch('currentPage', $scope.setPage);
+
+        $scope.totalItems = result.getAllUsersResponseDetails.length;
+        $scope.itemsPerPage = 10;
+        $scope.currentPage = 1;
+
+        $scope.orderByName = false;
+
+        $scope.setPage = function(pageNo) {
+            $scope.currentPage = pageNo;
+        };
+
+        $scope.pageChanged = function() {
+            console.log('Page changed to: ' + $scope.currentPage);
+        };
+
+        $scope.maxSize = 5;
+        $scope.bigTotalItems = 175;
+        $scope.bigCurrentPage = 1;
+
+
+    };
+
+    $scope.init = function() {
+        userListProxy.getUsersList(null, $scope.userListFetched, $scope.userListFailed);
+    };
+    $scope.init();
+}]);
+

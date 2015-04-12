@@ -1,0 +1,3 @@
+var target = document.getElementById('pageLoader');
+var spinner = new Spinner().spin();
+target.appendChild(spinner.el);

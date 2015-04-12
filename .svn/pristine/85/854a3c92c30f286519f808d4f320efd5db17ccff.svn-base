@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="go2ahcApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>go2AHC</title>
+    <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- HTML View -->
+    <div>
+        <div ng-show="loading" class="my-loading-spinner-container"></div>
+        <div ng-hide="loading" ng-transclude></div>
+    </div>
+    <div id="view" ng-view class="intial_view"> </div>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- if Jquery fails to load fallback a local version -->
+    <script>
+    //window.jQuery || document.write('<script src="scripts/libraries/jquery-1.11.1.js"><\/script>')
+    window.jQuery || document.write('<script src="scripts/libraries/jquery/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <!-- attempt to load Bootstrap from CDN -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- if Bootstrap fails to load fallback a local version -->
+    <script>
+    $.fn.modal || document.write('<script src="scripts/libraries/bootstrap/bootstrap.min.js"><\/script>')
+    </script>
+    <!-- Custom Dropdown select box -->
+    <script type="text/javascript" src="scripts/libraries/bootstrap/bootstrap-select.min.js"></script>
+    <!-- attempt to load AngularJS from CDN -->
+    <script src="https://code.angularjs.org/1.2.22/angular.min.js"></script>
+    <!-- if AngularJS fails to load fallback a local version -->
+    <script>
+    window.angular || document.write('<script src="scripts/libraries/angularjs/angular.min.js"><\/script>');
+    </script>
+    <script src="scripts/libraries/angularjs/angular-route.min.js"></script>
+    <script src="scripts/libraries/angularjs/angular-local-storage.js"></script>
+    <script src="scripts/libraries/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    <!-- Spin.js page laoder -->
+    <script src="scripts/libraries/spin.min.js"></script>
+    <!-- Routing Script -->
+    <script src="scripts/common/routing.js"></script>
+    <!-- Global Script -->
+    <script src="scripts/common/globalfn.js"></script>
+    <!-- Session Service -->
+    <script src="scripts/common/services.js"></script>
+    <!-- Session Service -->
+    <script src="scripts/common/directive.js"></script>
+    <!-- Main Service -->
+    <script src="scripts/main.js"></script>
+    <!-- Proxy -->
+    <script src="scripts/proxy/proxy.js"></script>
+    <script src="scripts/proxy/authenticationProxy.js"></script>
+    <script src="scripts/proxy/userListProxy.js"></script>
+    <!-- Controllers -->
+    <script src="controllers/dashboardController.js"></script>
+    <script src="controllers/loginController.js"></script>
+    <script src="controllers/headerController.js"></script>
+    <script src="controllers/userListController.js"></script>
+</body>
+
+</html>

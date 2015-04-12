@@ -1,0 +1,120 @@
+/* Services function */
+
+/*
+ *   Role : To pass the variables or objects from one controller to another in angularjs
+ */
+go2ahcApp.service('sharedProperties', function () {
+	var hashtable = {};
+	return {
+	    setValue: function (key, value) {
+	        hashtable[key] = value;
+	    }
+		,getValue: function (key) {
+	        return hashtable[key];
+	    }
+		,removeValue : function(key) {
+			delete hashtable[key];
+		}
+	};
+});
+
+/* factory functions */
+
+go2ahcApp.factory('UserService', function() {
+    return {
+        recordsPerPage : 1
+    };
+});
+
+go2ahcApp.factory('genericFunctions',['localize',function (localize) {
+	return {
+	    setEnglishLanguage: function () {
+	        localize.setLanguage('en-US');
+	        localStorage.setItem('langSel', 'en-US');
+	    }
+		,setSpanishLanguage: function () {
+		    localize.setLanguage('spanish');
+		    localStorage.setItem('langSel', 'es');
+	    }
+		,showTransLoader : function() {
+			$(LOADERIDS.TRANSFORM).css('opacity','0.5').show();
+			$("body").css("overflow","hidden");
+		}
+		,hideTransLoader : function() {
+			$(LOADERIDS.TRANSFORM).hide();
+			$("body").css("overflow","auto");
+		}
+		,showOpaqueLoader : function() {
+			$(LOADERIDS.OPAQUE).show();
+			$("body").css("overflow","hidden");
+		}
+		,hideOpaqueLoader : function() {
+			$(LOADERIDS.OPAQUE).hide();
+			$("body").css("overflow","auto");
+		}
+		/*,isBusinessUserLoggedIn: function () {
+	        var loggedBuserId = sharedProperties.getValue("loginResult").userId;
+			$location.url('/business_profile_setup');
+	    }*/
+	};
+}]);
+
+/* Filter functions */
+
+/*To display all the input fields in the popup*/
+go2ahcApp.filter('to_trusted', ['$sce', function($sce){
+	return function(text) {
+		return $sce.trustAsHtml(text);
+	};
+}]);
+	
+go2ahcApp.factory('UserService', function() {
+    return {
+        recordsPerPage : 10
+    };
+});
+
+go2ahcApp.factory('mySharedService', function ($rootScope) {
+    var sharedService = {};
+
+    sharedService.message = '';
+
+    sharedService.prepForBroadcast = function (msg) {//msg
+        this.message = msg;
+        this.broadcastItem();
+    };
+
+    sharedService.broadcastItem = function () {
+        $rootScope.$broadcast('handleBroadcast');
+    };
+
+    return sharedService;
+});
+
+go2ahcApp.factory('sessionService', ['$rootScope',
+    function ($rootScope) {
+    var session = {
+        init: function () {
+            this.resetSession();
+        },
+        resetSession: function() {
+            this.currentUser = null;
+            this.loggedOut = true;
+        },
+        logout: function() {
+            this.resetSession();
+             $rootScope.$emit('session-changed-logout');
+        },
+        authSuccess: function(userData) {
+        	console.log(userData);
+            this.currentUser = userData;
+            this.loggedOut = false;
+            $rootScope.$emit('session-changed-login');
+        },
+        authFailed: function() {
+            this.resetSession();
+        }
+    };
+    session.init();
+    return session;
+}]);

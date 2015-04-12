@@ -1,0 +1,55 @@
+<div class="contact_wrapper mar-top-30">
+<div class="row">
+
+	<ul class="nav nav-tabs main_header_link">
+	    <li class="active heading_inside"><a showtab="" href="#allUser" class="header_link">All Users</a></li>
+	    <li class="heading_inside"><a showtab="" href="#careProvider" class="header_link">Care Providers</a></li>
+
+	    <li class="heading_inside"><a showtab="" href="#patients" class="header_link">Patients</a></li>
+	    <li class="heading_inside"><a showtab="" href="#import" class="header_link">Import</a></li>
+
+	</ul>
+
+	<div class="calendarNav tab-pane fade in active" id="allUser">
+	    All User Page............
+	</div>
+
+	<div id="careProvider" class="tab-pane fade">
+	    Care Providers page...........
+	</div>
+
+
+	<div id="patients" class="tab-pane fade">
+	    Patients Page.............
+	</div>
+
+	<div id="import" class="tab-pane fade contact_import_details">
+	 
+
+		<div class="import_contact_div">
+		 	<label class="import_page_lbl">Import Contacts(.xls / .xlsx / .csv)</label></br>				
+		    <div class="choose_file">
+		        <span>Browse..</span>
+		        <input name="Select File" type="file" class="import_upload_div" />
+		    </div>
+		    <button class="btn upload_btn" ng-click="uploadXLS()">Upload</button></br>
+		</div>
+
+		<div class="import_redemption_code_div"> 
+			<label class="import_page_lbl">Import Redemtion Code(.xls / .xlsx / .csv)</label></br>	
+			<div class="choose_file">
+		        <span>Browse..</span>
+		        <input name="Select File" type="file" class="import_upload_div" />
+		    </div>
+		    <button class="btn upload_btn" ng-click="uploadXLS()">Upload</button>
+		</div>
+
+
+
+	</div>
+
+
+</div>
+       
+</div>
+

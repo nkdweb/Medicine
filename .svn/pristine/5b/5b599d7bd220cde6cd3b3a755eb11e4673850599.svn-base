@@ -1,0 +1,17 @@
+<div class="row app_header">
+    <div class="col-sm-2 col-md-2 col-lg-2 app_logo">
+    </div>
+    <div class="col-sm-10 col-md-10 col-lg-10 dashboard_details">
+    	<div class="row">
+    		<div class="col-sm-8 col-md-8 col-lg-8 text-left pad-top-30" ng-controller="headerController">
+				<span class="welcome">Welcome!</span><span class="user_name" ng-bind="LoggedinUserFirstName">admin</span>
+				<span class="notification_icon"></span>
+    		</div>
+    		<div class="col-sm-4 col-md-4 col-lg-4 pull-right pad-top-20">
+    			<div class="input-group" ng-controller="userListController">
+				  <user-search></user-search>
+				</div>
+    		</div>
+    	</div>
+    </div>
+</div>

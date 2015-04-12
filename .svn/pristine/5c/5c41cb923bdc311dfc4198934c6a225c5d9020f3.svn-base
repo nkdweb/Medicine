@@ -1,0 +1,122 @@
+.mapping_wrap {
+    .user_map {
+        background: #ffffff;
+        border-radius: 0px 0px 8px 8px;
+        border: solid #D3D7DA 1px;
+        height: 510px;
+        width: 100%;
+        padding: 0px 18px;
+    }
+    .input-group {
+        padding-top: 0px;
+        width: 82%;
+        margin: 0 auto;
+        .search_input {
+            height: 38px;
+        }
+    }
+    .input-group-addon.search {
+        background: none repeat scroll 0 0 #21b0ea;
+        border: 1px solid #21b0ea;
+        color: #ffffff;
+    }
+    .static_user_search {
+        background: #F0F5F9;
+        border-right: 1px solid #d3d7da;
+        border-left: 1px solid #d3d7da;
+        border-top: 1px solid #d3d7da;
+        padding-bottom: 16px;
+        width: 100%;
+        height:100px;
+    }
+    .alpha_index {
+        background: #F0F5F9;
+        border-right: 1px solid #d3d7da;
+        border-left: 1px solid #d3d7da;
+        border-top: 1px solid #d3d7da;
+        padding-bottom: 16px;
+        width: 100%;
+        height:100px;
+    }
+    .user_search {
+        background: #ffffff;
+        border-right: solid #D3D7DA 1px;
+        border-left: solid #D3D7DA 1px;
+        border-bottom: solid #D3D7DA 1px;
+        max-height: 500px;
+        overflow: hidden;
+        overflow-y: auto;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .search_list {
+        padding-top: 0px;
+    }
+    .check_list {
+        border-bottom: 1px #E2E7E7 solid;
+        padding: 15px 0;
+        color: #53565D;
+        font-size: 12px;
+        font-family: verdana;
+    }
+    .grey_rounded {
+        background: none repeat scroll 0 0 #f7f7f7;
+        border-radius: 10px;
+        color: #9fa3a6;
+        display: block;
+        margin-top: 7px;
+        padding: 2px 6px 3px;
+    }
+    .lbl_grey {
+        color: #969A9D;
+        font-size: 12px;
+        font-family: verdana;
+        font-weight: normal;
+    }
+    .mapping_step {
+        height: 100px;
+        background: #F0F5F9 url("../images/step1.png") no-repeat center 25px;
+        border-radius: 8px;
+    }
+    .mapped_user {
+        float: left;
+        display: block;
+        padding: 5px 10px;
+        width: auto;
+    }
+    .del_users {
+        background: url("../images/del_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+        display: block;
+        float: left;
+        height: 16px;
+        left: -8px;
+        position: relative;
+        top: -6px;
+        width: 17px;
+    }
+    .step_info1 {
+        left: 62px;
+        position: relative;
+        text-align: center;
+        top: 61px;
+        width: 100px;
+    }
+    .step_info2 {
+        float: right;
+        position: relative;
+        right: 80px;
+        top: 42px;
+        text-align: center;
+    }
+    .user_add {
+        background: #F0F5F9 url("../images/add_btn.png") no-repeat;
+        height: 52px;
+        position: absolute;
+        right: 40px;
+        top: 552px;
+        width: 52px;
+    }
+    .exist_conn_title {
+        padding: 10px 33px 0;
+    }
+}

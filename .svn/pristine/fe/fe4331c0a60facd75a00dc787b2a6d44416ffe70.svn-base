@@ -1,0 +1,14 @@
+go2ahcApp.controller('userListController', ['$scope', '$location', function($scope, $location) {
+
+	var userListProxy = new userList();	
+
+	$scope.userListFetched = function(result) {
+		//console.log("login result = " + JSON.stringify(result));  
+		$scope.userList = result;		
+	};
+
+	$scope.init = function() {
+		userListProxy.getUsersList(null, $scope.userListFetched, $scope.userListFailed);
+	};
+	$scope.init();
+}]);

@@ -1,0 +1,97 @@
+.contact_wrapper {
+    background: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+    border: solid #D3D7DA 1px;
+    min-height: 510px;
+    width: 100%;
+    .user_list_header {
+        height: 44px;
+        padding-top: 10px;
+        color: #8F969C;
+        .list_name {
+            padding-left: 65px;
+        }
+    }
+    .user_lists {
+        color: #4A5864;
+        border-bottom: 1px solid #E2E7E7;
+        padding: 6px 0;
+        .user_img {
+            height: 40px;
+            width: 40px;
+            background: #E2E2E2;
+            border-radius: 50%;
+            float: left;
+        }
+        .user_name {
+            float: left;
+            padding: 10px;
+        }
+        .user_type_cp {
+            background: none repeat scroll 0 0 #e1ffc1;
+            border-radius: 4px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #89BF4F;
+            font-size: 13px;
+        }
+        .user_type_pt {
+            background: #DDF8FD;
+            border-radius: 4px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #6AD1DF;
+            font-size: 13px;
+        }
+        .user_groups {
+            background: #FAF6BC;
+            border-radius: 4px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #89BF4F;
+            font-size: 13px;
+        }
+        .user_mapping {
+            background: #EBEBEB;
+            border-radius: 4px;
+            display: table;
+            float: left;
+            height: 18px;
+            margin: 10px 6px 0px;
+            padding: 0px 10px;
+            color: #B7B7B7;
+            font-size: 13px;
+        }
+        .user_mobile {
+            margin: 10px 6px 0px;
+        }
+        .user_redem_code {
+            margin: 10px 6px 0px;
+        }
+        .user_status {
+            margin: 10px 6px 0px;
+        }
+    }
+}
+
+.user_list_pagination {
+	margin: 0 auto;
+    text-align: center;
+    .pagination > li > a {
+        background-color: transparent !important;
+    }
+    .pagination-lg > li > a,
+    .pagination-lg > li > span {
+        font-size: 14px !important;
+        border: 1px solid #CACDD4;
+    }
+}

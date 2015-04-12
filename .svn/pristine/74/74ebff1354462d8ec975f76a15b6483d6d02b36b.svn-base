@@ -1,0 +1,59 @@
+var go2ahcApp = angular.module('go2ahcApp', ['ngRoute']).run(function($templateCache, $http) {
+
+});
+
+
+/* Router ==> URl for Views */
+go2ahcApp.config(function($routeProvider, $locationProvider) {
+
+    $routeProvider
+        .when('/', {
+            templateUrl: 'views/home.html'
+        })
+        .when('/contacts', {
+            templateUrl: 'views/dashboard.html'
+        })
+        .when('/dashboard', {
+            templateUrl: 'views/dashboard.html'
+        })
+        .when('/mapping', {
+            templateUrl: 'views/dashboard.html'
+        })
+        .when('/construction', {
+            templateUrl: 'views/dashboard.html'
+        })
+        .when('/home', {
+            templateUrl: 'views/home.html'
+        })
+        .when('/contacts_import', {
+            templateUrl: 'views/dashboard.html'
+        })
+        .when('/setting', {
+            templateUrl: 'views/dashboard.html'
+        })
+        .otherwise({
+            redirectTo: 'views/dashboard.html'
+        });
+});
+
+go2ahcApp.run(function($rootScope, $location) {
+    $rootScope.$on("$routeChangeStart", function(event, next, current) {
+        switch (next.originalPath) {
+            case "/mapping":
+                $rootScope.template = "views/mapping.html";
+                break;
+            case "/contacts_import":
+                $rootScope.template = "views/contacts_import.html";
+                break;
+            case "/construction":
+                $rootScope.template = "views/construction.html";
+                break;
+            case "/contacts":
+                $rootScope.template = "views/contacts_users.html";
+                break;
+             case "/setting":
+                $rootScope.template = "views/contacts_import.html";
+                break;
+        }
+    });
+});

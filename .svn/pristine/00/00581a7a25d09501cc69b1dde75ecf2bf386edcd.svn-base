@@ -1,0 +1,73 @@
+/* Bootstrap row override */
+
+.row {
+    margin: 0px;
+}
+
+.form-control.nobrdradius {
+    border-radius: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* All Padding Hacks */
+.pad-top-6 {
+	padding-top: 6px;
+}
+.pad-top-10 {
+	padding-top: 10px;
+}
+.pad-top-20 {
+	padding-top: 20px;
+}
+.pad-top-30 {
+	padding-top: 30px;
+}
+.pad-top-200 {
+	padding-top: 200px;
+}
+
+/* All Margin Hacks */
+
+.mar-top-10 {
+	margin-top: 10px;
+}
+.mar-top-20 {
+	margin-top: 20px;
+}
+.mar-top-25 {
+	margin-top: 25px;
+}
+.mar-top-30 {
+	margin-top: 30px;
+}
+.mar-top-60 {
+	margin-top: 60px;
+}
+.mar-top-200 {
+	margin-top: 200px;
+}
+
+
+/* Button CSS Starts*/
+.btn-app {
+	background: #0BAEEF;
+	color: #FFFFFF;
+	padding: 12px 40px;
+	border: solid 1px #1292C1;
+	border-radius: 0;
+}
+
+/* Button CSS Ends */
+
+input[type="file"]:focus, input[type="checkbox"]:focus, input[type="radio"]:focus {
+	outline: none;
+	outline-offset: 0px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	outline: none;
+}

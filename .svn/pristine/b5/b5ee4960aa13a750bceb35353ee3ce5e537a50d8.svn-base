@@ -1,0 +1,87 @@
+<div class="mapping_wrap" ng-controller="mappingController">
+	<div class="row">
+		<div class="col-sm-8 col-md-8 col-lg-8 pad-top-30">
+			<div class="user_map">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 mapping_step">
+						<div class="step_info1">
+							Select User
+						</div>
+						<div class="step_info2">
+							Mapped
+						</div>
+					</div>
+				</div>
+				<div class="row mar-top-60">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<label class="lbl_grey">Primary User</label>
+					</div>
+					<div class="col-sm-2 col-md-2 col-lg-2">
+						<input type="radio" ng-model="Filter.userType" value="Patient" ng-change="setVal()"> &nbsp;&nbsp;Patient
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-4">
+						<input type="radio" ng-model="Filter.userType" value="Care Provider" ng-change="setVal()">&nbsp;&nbsp; Care Provider
+					</div>
+				</div>
+				<div class="row mar-top-20">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control nobrdradius" ng-model="Filter.patientName">
+					</div>
+				</div>
+				<div class="row mar-top-25">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<label class="lbl_grey">Secondary User</label>
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control nobrdradius">
+					</div>
+				</div>
+				<div class="row mar-top-30">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+					</div>
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						<span class="mapped_user">Vincent Porter</span><span class="del_users"></span>
+						<span class="mapped_user">Mike Thomas </span><span class="del_users"></span>
+						<span class="mapped_user">Monika</span><span class="del_users"></span>
+						<span class="mapped_user">Mickinney</span><span class="del_users"></span>
+						<span class="mapped_user">Tracy Jane </span><span class="del_users"></span>						
+					</div>
+				</div>
+				<div class="row mar-top-30">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+					</div>
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						<button class="btn btn-app">Map Users</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 pad-top-30">
+			<div class="static_user_search">
+			    <div class="input-group">
+			        <input type="text" class="form-control search_input" placeholder="Type Something to search..." aria-describedby="basic-addon2" ng-model="searchKeyword">
+			        <span class="input-group-addon search" id="basic-addon2">Search</span>
+			    </div>
+			</div>
+			<div class="user_search">
+				<div class="search_list">
+					<div class="row check_list" ng-repeat="item in userListData | filter: searchKeyword " ng-show="filterList(item)">
+						<div class="col-sm-1 col-md-1 col-lg-1">
+							<input type="checkbox" class="form-control">
+						</div>
+						<div class="col-sm-7 col-md-7 col-lg-7 pad-top-10">
+							{{item.name}}
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<span class="grey_rounded">View</span>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="user_add"></div>
+		</div>
+		
+	</div>
+</div>	
